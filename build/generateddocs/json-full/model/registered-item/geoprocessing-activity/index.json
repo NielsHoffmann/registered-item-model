@@ -22,13 +22,13 @@
   ],
   "shaclShapes": {
     "ogc.model.registered-item.geoprocessing-activity": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
     ],
     "ogc.model.registered-item.activity-type": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
     ],
     "ogc.model.registered-item.core-ontology": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ],
     "ogc.model.cross-domain.prov": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -51,11 +51,11 @@
     "register"
   ],
   "dateTimeAddition": "2026-09-23T00:00:00Z",
-  "dateOfLastChange": "2026-09-30",
-  "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity/ontology.ttl",
-  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/",
+  "dateOfLastChange": "2026-09-23",
+  "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity/ontology.ttl",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity/",
+  "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity/",
   "examples": [
     {
       "title": "A registered NDVI computation activity type",
@@ -63,7 +63,7 @@
       "snippets": [
         {
           "language": "turtle",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity/example_1_1.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity/example_1_1.ttl",
           "sizeBytes": 1716,
           "code": "ex:eoProcessingRegister a rim:Register ;\n    dct:title \"EO Processing Activity Types\" .\n\nex:NdviComputation a acttype:ActivityType , owl:Class ;\n    rdfs:subClassOf geoproc:GeoprocessingActivity ;\n    rdfs:label \"NDVI computation\" ;\n    dct:title \"NDVI computation\" ;\n    dct:description \"Computes the Normalized Difference Vegetation Index from the red and near-infrared bands of a multispectral scene.\" ;\n    rim:inRegister ex:eoProcessingRegister ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/geoprocessing/ndvi-computation/v1\"^^xsd:anyURI ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published ;\n    acttype:usedEntityType ex:MultispectralScene ;\n    acttype:generatedEntityType ex:NdviRaster ;\n    acttype:associatedAgentType prov:SoftwareAgent ;\n    acttype:plan ex:ndviPlan .\n\nex:MultispectralScene a owl:Class ;\n    rdfs:subClassOf geo:Feature , prov:Entity ;\n    rdfs:label \"Multispectral scene\" .\n\nex:NdviRaster a owl:Class ;\n    rdfs:subClassOf geo:Feature , prov:Entity ;\n    rdfs:label \"NDVI raster\" .\n\nex:ndviPlan a prov:Plan , p-plan:Plan ;\n    dct:title \"NDVI computation procedure\" .\n\nex:cloudMask a p-plan:Step ;\n    p-plan:isStepOfPlan ex:ndviPlan ;\n    dct:description \"Mask cloud and cloud-shadow pixels using the scene's quality band.\" .\n\nex:reproject a p-plan:Step ;\n    p-plan:isStepOfPlan ex:ndviPlan ;\n    p-plan:isPrecededBy ex:cloudMask ;\n    dct:description \"Reproject the red and near-infrared bands to the target grid.\" .\n\nex:computeIndex a p-plan:Step ;\n    p-plan:isStepOfPlan ex:ndviPlan ;\n    p-plan:isPrecededBy ex:reproject ;\n    dct:description \"Compute (NIR - Red) / (NIR + Red) per pixel.\" .\n"
         }
@@ -97,6 +97,6 @@
     "ex": "https://example.org/registers/geoprocessing/"
   },
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
   "gitPath": "_sources/geoprocessing-activity"
 }

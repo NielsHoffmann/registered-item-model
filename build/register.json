@@ -3,7 +3,7 @@
   "name": "Registered Item Model",
   "abstract": "A base RDF and SHACL model for register items, register item classes and register\ngovernance metadata, aligned with ISO 19135:2026 (*Geographic information \u2014 Registration\nand register governance*). Sub-registers profile this model rather than inventing their own.\n",
   "description": "A register is a catalogue with systematic governance: a content information model\n(what an item looks like) plus management metadata (who governs it, what state it is\nin, how it changes). ISO 19135:2026 defines one such register model \u2014 separating a\n**concept plane** (meaning: concepts and concept versions) from a **content plane**\n(representation: register item classes and register items) and adding a governance\nlayer of roles, statuses, actions and commitments.\n\nThis repository publishes that model as a single base [OGC Building\nBlock](https://ogcincubator.github.io/bblocks-docs/), independent of any one register's\nown content schema. Any register \u2014 a CSV catalogue, the OGC Definitions Server, a\nGitHub-managed vocabulary, or a Building Blocks register itself \u2014 maps its own\nschema's identifiers, statuses and roles onto this base model via a JSON-LD context,\nso that management metadata from otherwise unrelated registers becomes one queryable\ngraph. A sub-register's rules are expressed as a profile of this base block (null,\nadditive, or constrained), always validating against it.\n\nRegister vs. registry: the **register** is the governed information (items,\nidentifiers, statuses, roles, processes); the **register system** \u2014 often loosely\ncalled the \"registry\" \u2014 is merely the information system it happens to run on. This\nmodel describes the former, independent of the latter.\n",
-  "modified": "2026-09-30T09:07:19.084932",
+  "modified": "2026-10-01T05:26:35.602520",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6411aed037da38c6d9079d9350eca33d004a4d0c",
@@ -11,12 +11,12 @@
       "date": "2026-09-23T12:30:49+00:00\""
     }
   },
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
-  "gitHubRepository": "https://github.com/ogcincubator/registered-item-model/blob/master/",
-  "baseURL": "https://ogcincubator.github.io/registered-item-model/",
-  "viewerURL": "https://ogcincubator.github.io/registered-item-model/",
-  "validationReport": "https://ogcincubator.github.io/registered-item-model/build/tests/report.html",
-  "validationReportJson": "https://ogcincubator.github.io/registered-item-model/build/tests/report.json",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
+  "gitHubRepository": "https://github.com/NielsHoffmann/registered-item-model/blob/master/",
+  "baseURL": "https://nielshoffmann.github.io/registered-item-model/",
+  "viewerURL": "https://nielshoffmann.github.io/registered-item-model/",
+  "validationReport": "https://nielshoffmann.github.io/registered-item-model/build/tests/report.html",
+  "validationReportJson": "https://nielshoffmann.github.io/registered-item-model/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://ogcincubator.github.io/cross-domain-model/build/register.json",
@@ -42,10 +42,10 @@
       ],
       "shaclShapes": {
         "ogc.model.registered-item.activity-type": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
         ],
         "ogc.model.registered-item.core-ontology": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -68,23 +68,23 @@
         "plan"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/ontology.ttl",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/",
+      "dateOfLastChange": "2026-09-23",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/activity-type/ontology.ttl",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/activity-type/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/activity-type/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-type/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-type/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-type/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-type/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-type"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-type"
         }
       }
     },
@@ -97,31 +97,31 @@
       "itemClass": "schema",
       "version": "0.2",
       "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/ontology.ttl",
+      "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/context.jsonld",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/ontology.ttl",
       "dateOfLastChange": "2026-09-25",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/concept-version/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/concept-version/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/concept-version/",
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/concept-version/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/concept-version/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/concept-version/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/concept-version/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/concept-version/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/concept-version/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/concept-version/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/concept-version/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/concept-version/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.concept-version"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.concept-version"
         }
       }
     },
@@ -134,31 +134,31 @@
       "itemClass": "schema",
       "version": "0.2",
       "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/context.jsonld",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/ontology.ttl",
+      "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/context.jsonld",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/ontology.ttl",
       "dateOfLastChange": "2026-09-25",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register/",
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register"
         }
       }
     },
@@ -197,26 +197,26 @@
         "plan"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
+      "dateOfLastChange": "2026-09-23",
       "shaclShapes": {
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
         ]
       },
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/activity-types/prov-activities/",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/activity-types/prov-activities/",
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-types/prov-activities/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/activity-types/prov-activities/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-types/prov-activities/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/activity-types/prov-activities/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-types.prov-activities"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.activity-types.prov-activities"
         }
       }
     },
@@ -239,7 +239,7 @@
       ],
       "shaclShapes": {
         "ogc.model.registered-item.core-ontology": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -262,23 +262,23 @@
         "metadata"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/",
+      "dateOfLastChange": "2026-09-17",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/core-ontology/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/core-ontology/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/core-ontology/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/core-ontology/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/core-ontology/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/core-ontology/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.core-ontology"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.core-ontology"
         }
       }
     },
@@ -304,13 +304,13 @@
       ],
       "shaclShapes": {
         "ogc.model.registered-item.geoprocessing-activity": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
         ],
         "ogc.model.registered-item.activity-type": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
         ],
         "ogc.model.registered-item.core-ontology": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -333,23 +333,23 @@
         "register"
       ],
       "dateTimeAddition": "2026-09-23T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity/ontology.ttl",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/",
+      "dateOfLastChange": "2026-09-23",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/geoprocessing-activity/ontology.ttl",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/geoprocessing-activity/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/geoprocessing-activity/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/geoprocessing-activity/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/geoprocessing-activity/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/geoprocessing-activity/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.geoprocessing-activity"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.geoprocessing-activity"
         }
       }
     },
@@ -375,19 +375,19 @@
       ],
       "shaclShapes": {
         "ogc.model.registered-item.ml-activity-profile": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-profile/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/ml-activity-profile/shapes.shacl"
         ],
         "ogc.contrib.stac.extensions.mlm-ontology": [
           "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
         ],
         "ogc.model.registered-item.geoprocessing-activity": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
         ],
         "ogc.model.registered-item.activity-type": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
         ],
         "ogc.model.registered-item.core-ontology": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -415,23 +415,23 @@
         "activity type"
       ],
       "dateTimeAddition": "2026-09-17T00:00:00Z",
-      "dateOfLastChange": "2026-09-30",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-profile/ontology.ttl",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-profile/",
+      "dateOfLastChange": "2026-09-23",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-profile/ontology.ttl",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/ml-activity-profile/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/ml-activity-profile/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/ml-activity-profile/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/ml-activity-profile/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/ml-activity-profile/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/ml-activity-profile/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/ml-activity-profile/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.ml-activity-profile"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.ml-activity-profile"
         }
       }
     },
@@ -444,35 +444,35 @@
       "itemClass": "schema",
       "version": "0.2",
       "dependsOn": [
-        "bblocks://ogc.model.registered-item.rim.register",
-        "bblocks://ogc.model.registered-item.rim.concept-version"
+        "bblocks://ogc.model.registered-item.rim.concept-version",
+        "bblocks://ogc.model.registered-item.rim.register"
       ],
       "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/context.jsonld",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/ontology.ttl",
+      "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/context.jsonld",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/ontology.ttl",
       "dateOfLastChange": "2026-09-25",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-item-class/",
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-item-class/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-item-class/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-item-class/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-item-class/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-item-class/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-item-class/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-item-class/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-item-class/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-item-class"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-item-class"
         }
       }
     },
@@ -488,31 +488,31 @@
         "bblocks://ogc.model.registered-item.rim.register"
       ],
       "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/context.jsonld",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/ontology.ttl",
+      "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/context.jsonld",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/ontology.ttl",
       "dateOfLastChange": "2026-09-25",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-specification/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-specification/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-specification/",
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-specification/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-specification/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-specification/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-specification/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-specification/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-specification/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-specification/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-specification/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-specification/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-specification/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-specification"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-specification"
         }
       }
     },
@@ -525,36 +525,36 @@
       "itemClass": "schema",
       "version": "0.2",
       "dependsOn": [
-        "bblocks://ogc.model.registered-item.rim.register",
         "bblocks://ogc.model.registered-item.rim.register-item-class",
-        "bblocks://ogc.model.registered-item.rim.concept-version"
+        "bblocks://ogc.model.registered-item.rim.concept-version",
+        "bblocks://ogc.model.registered-item.rim.register"
       ],
       "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/context.jsonld",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/ontology.ttl",
+      "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/context.jsonld",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/ontology.ttl",
       "dateOfLastChange": "2026-09-25",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/registered-item/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/registered-item/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/registered-item/",
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/registered-item/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/registered-item/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/registered-item/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/registered-item/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/registered-item/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/registered-item/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/registered-item/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/registered-item/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/registered-item/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.registered-item"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.registered-item"
         }
       }
     },
@@ -570,52 +570,52 @@
         "bblocks://ogc.model.registered-item.rim.registered-item"
       ],
       "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld",
-      "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/ontology.ttl",
+      "ldContext": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/context.jsonld",
+      "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/ontology.ttl",
       "dateOfLastChange": "2026-09-25",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/context.jsonld",
-      "resolvedSchemaProperties": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/resolvedProperties.json",
-      "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/rim/register-action/",
+      "sourceSchema": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/context.jsonld",
+      "resolvedSchemaProperties": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register-action/resolvedProperties.json",
+      "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/rim/register-action/",
       "validationPassed": false,
-      "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-action/",
+      "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/rim/register-action/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-action/index.md"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/markdown/model/registered-item/rim/register-action/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-action/index.json"
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/generateddocs/json-full/model/registered-item/rim/register-action/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-action"
+          "url": "https://nielshoffmann.github.io/registered-item-model/bblock/ogc.model.registered-item.rim.register-action"
         }
       }
     }
   ],
-  "remoteCacheDir": "https://ogcincubator.github.io/registered-item-model/build/annotated/_cache",
+  "remoteCacheDir": "https://nielshoffmann.github.io/registered-item-model/build/annotated/_cache",
   "links": [
     {
       "rel": "self",
-      "href": "https://ogcincubator.github.io/registered-item-model/build/register.json",
+      "href": "https://nielshoffmann.github.io/registered-item-model/build/register.json",
       "type": "application/json",
       "title": "This Building Blocks Register in JSON format"
     },
     {
       "rel": "self",
-      "href": "https://ogcincubator.github.io/registered-item-model/build/bblocks.ttl",
+      "href": "https://nielshoffmann.github.io/registered-item-model/build/bblocks.ttl",
       "type": "text/turtle",
       "title": "This Building Blocks Register in RDF Turtle format"
     },
     {
       "rel": "self",
-      "href": "https://ogcincubator.github.io/registered-item-model/build/bblocks.jsonld",
+      "href": "https://nielshoffmann.github.io/registered-item-model/build/bblocks.jsonld",
       "type": "application/ld+json",
       "title": "This Building Blocks Register in JSON-LD format"
     }

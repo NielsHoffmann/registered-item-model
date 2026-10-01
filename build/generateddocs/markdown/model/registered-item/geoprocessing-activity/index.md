@@ -72,6 +72,6 @@ ex:computeIndex a p-plan:Step ;
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/registered-item-model](https://github.com/ogcincubator/registered-item-model)
+* URL: [https://github.com/NielsHoffmann/registered-item-model](https://github.com/NielsHoffmann/registered-item-model)
 * Path: `_sources/geoprocessing-activity`
 

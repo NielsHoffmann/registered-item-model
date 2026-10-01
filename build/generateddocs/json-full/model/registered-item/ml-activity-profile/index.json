@@ -22,19 +22,19 @@
   ],
   "shaclShapes": {
     "ogc.model.registered-item.ml-activity-profile": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-profile/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/ml-activity-profile/shapes.shacl"
     ],
     "ogc.contrib.stac.extensions.mlm-ontology": [
       "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
     ],
     "ogc.model.registered-item.geoprocessing-activity": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/geoprocessing-activity/shapes.shacl"
     ],
     "ogc.model.registered-item.activity-type": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/activity-type/shapes.shacl"
     ],
     "ogc.model.registered-item.core-ontology": [
-      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+      "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
     ],
     "ogc.model.cross-domain.prov": [
       "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -62,11 +62,11 @@
     "activity type"
   ],
   "dateTimeAddition": "2026-09-17T00:00:00Z",
-  "dateOfLastChange": "2026-09-30",
-  "ontology": "https://ogcincubator.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-profile/ontology.ttl",
-  "sourceFiles": "https://ogcincubator.github.io/registered-item-model/_sources/ml-activity-profile/",
+  "dateOfLastChange": "2026-09-23",
+  "ontology": "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/ml-activity-profile/ontology.ttl",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/ml-activity-profile/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/registered-item-model/blob/master/build/tests/model/registered-item/ml-activity-profile/",
+  "testOutputs": "https://github.com/NielsHoffmann/registered-item-model/blob/master/build/tests/model/registered-item/ml-activity-profile/",
   "examples": [
     {
       "title": "An inference run that adds its result to a register",
@@ -74,7 +74,7 @@
       "snippets": [
         {
           "language": "turtle",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/ml-activity-profile/example_1_1.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/ml-activity-profile/example_1_1.ttl",
           "sizeBytes": 2068,
           "code": "ex:landCoverModel a stac:Item ;\n    mlm:name \"Land Cover Classifier\" ;\n    mlm:architecture \"U-Net\" ;\n    mlm:tasks mlm:semantic-segmentation ;\n    mlm:framework \"PyTorch\" ;\n    mlm:input ex:landCoverInputSpec ;\n    mlm:output ex:landCoverOutputSpec .\n\nex:landCoverInputSpec a mlm:ModelInput ;\n    mlm:io_name \"sentinel2_bands\" ;\n    mlm:input_structure ex:landCoverInputStructure .\n\nex:landCoverInputStructure a mlm:InputStructure ;\n    mlm:shape -1, 4, 512, 512 ;\n    mlm:dim_order \"batch\", \"channel\", \"height\", \"width\" ;\n    mlm:data_type \"float32\" .\n\nex:landCoverOutputSpec a mlm:ModelOutput ;\n    mlm:io_name \"segmentation_mask\" ;\n    mlm:result ex:landCoverResultStructure .\n\nex:landCoverResultStructure a mlm:ResultStructure ;\n    mlm:shape -1, 10, 512, 512 ;\n    mlm:dim_order \"batch\", \"class\", \"height\", \"width\" ;\n    mlm:data_type \"uint8\" .\n\nex:sceneChip a mlact:ActivityInput ;\n    dct:conformsTo ex:landCoverInputSpec ;\n    mlact:structure ex:landCoverInputStructure .\n\nex:predictedMask a mlact:ActivityOutput ;\n    dct:conformsTo ex:landCoverOutputSpec ;\n    mlact:structure ex:landCoverResultStructure .\n\nex:inference2026-09-01 a mlact:InferenceActivity ;\n    mlact:model ex:landCoverModel ;\n    mlact:performsTask mlm:semantic-segmentation ;\n    mlact:framework \"PyTorch\" ;\n    mlact:accelerator mlm:cuda ;\n    mlact:input ex:sceneChip ;\n    mlact:output ex:predictedMask ;\n    rim:actionType rim:additionAction ;\n    rim:appliesTo ex:predictedItem ;\n    prov:startedAtTime \"2026-09-01T10:00:00Z\"^^xsd:dateTime ;\n    prov:endedAtTime \"2026-09-01T10:00:05Z\"^^xsd:dateTime .\n\nex:predictedItem a rim:RegisterItem ;\n    dct:title \"Predicted land cover mask, scene S2A_2026-09-01\" ;\n    rim:itemClass ex:derivedProductItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/ml-activities/items/predicted-mask-2026-09-01\"^^xsd:anyURI ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published ;\n    rim:hasAction ex:inference2026-09-01 .\n\nex:derivedProductItemClass a rim:RegisterItemClass ;\n    dct:title \"Derived ML product\" .\n"
         }
@@ -101,7 +101,7 @@
       "snippets": [
         {
           "language": "turtle",
-          "url": "https://ogcincubator.github.io/registered-item-model/build/tests/model/registered-item/ml-activity-profile/example_2_1.ttl",
+          "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/ml-activity-profile/example_2_1.ttl",
           "sizeBytes": 1816,
           "code": "ex:mlActivityTypeRegister a rim:Register ;\n    dct:title \"EO Machine Learning Activity Types\" .\n\nex:LandCoverSegmentation a acttype:ActivityType , owl:Class ;\n    rdfs:subClassOf mlact:InferenceActivity ;\n    rdfs:label \"Land cover segmentation\" ;\n    dct:title \"Land cover segmentation\" ;\n    dct:description \"Runs a semantic segmentation model over a multispectral scene to produce a per-pixel land cover mask.\" ;\n    rim:inRegister ex:mlActivityTypeRegister ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://example.org/registers/ml-activities/types/land-cover-segmentation/v1\"^^xsd:anyURI ;\n    rim:validityStatus rim:valid ;\n    rim:publicationStatus rim:published ;\n    acttype:usedEntityType mlact:ActivityInput ;\n    acttype:generatedEntityType mlact:ActivityOutput ;\n    acttype:associatedAgentType prov:SoftwareAgent ;\n    acttype:plan ex:landCoverSegmentationPlan .\n\nex:landCoverSegmentationPlan a prov:Plan , p-plan:Plan ;\n    dct:title \"Land cover segmentation procedure\" .\n\nex:tileScene a p-plan:Step ;\n    p-plan:isStepOfPlan ex:landCoverSegmentationPlan ;\n    dct:description \"Tile the scene into chips matching the model's declared input shape.\" .\n\nex:normalizeBands a p-plan:Step ;\n    p-plan:isStepOfPlan ex:landCoverSegmentationPlan ;\n    p-plan:isPrecededBy ex:tileScene ;\n    dct:description \"Apply the model's declared value scaling to each band.\" .\n\nex:runModel a p-plan:Step ;\n    p-plan:isStepOfPlan ex:landCoverSegmentationPlan ;\n    p-plan:isPrecededBy ex:normalizeBands ;\n    dct:description \"Run the model over each chip.\" .\n\nex:mosaicMask a p-plan:Step ;\n    p-plan:isStepOfPlan ex:landCoverSegmentationPlan ;\n    p-plan:isPrecededBy ex:runModel ;\n    dct:description \"Take the per-pixel argmax and mosaic the chips back into a scene-sized mask.\" .\n"
         }
@@ -139,6 +139,6 @@
     "ex": "https://example.org/registers/ml-activities/"
   },
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/ogcincubator/registered-item-model",
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
   "gitPath": "_sources/ml-activity-profile"
 }
