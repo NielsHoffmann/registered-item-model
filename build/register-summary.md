@@ -65,7 +65,19 @@ A base RDF and SHACL model for register items, register item classes and registe
 
 A profile of the Activity Type Register Profile for geoprocessing activity types: registered sub-classes of geoproc:GeoprocessingActivity, each required to use or generate at least one GeoSPARQL spatial data type.
 
+### `ogc.model.registered-item.register-item-classes.geoprocessing` — Geoprocessing Item Class Profile
+
+**Type:** model
+
+A profile of the Activity Type Register Profile for geoprocessing activity types
+
 ### `ogc.model.registered-item.ml-activity-profile` — ML Activity Profile
+
+**Type:** model
+
+A profile of the Geoprocessing Activity Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.
+
+### `ogc.model.registered-item.register-item-classes.machinelearning` — ML Item Class Profile
 
 **Type:** model
 

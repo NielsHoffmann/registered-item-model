@@ -70,6 +70,7 @@ This block provides the structural representation of an action record. Authoriza
 @prefix rim: <https://w3id.org/ogc/rim/>.
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix ex: <https://example.org/rim/>.
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 ex:a a rim:RegisterAction;
   rim:actionType ex:addition;

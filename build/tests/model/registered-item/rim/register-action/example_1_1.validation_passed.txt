@@ -1,0 +1,7 @@
+Validation report for ogc.model.registered-item.rim.register-action - Register Action
+Generated 2026-10-01T07:52:47.030843+00:00
+=== Files ===
+Using examples/example.ttl from examples
+Output Turtle example_1_1.ttl created
+=== End Files ===
+

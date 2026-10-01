@@ -1,16 +1,16 @@
 {
-  "title": "Validation report for ogc.model.registered-item.geoprocessing-activity - Geoprocessing Activity Profile",
-  "bblockName": "Geoprocessing Activity Profile",
-  "bblockId": "ogc.model.registered-item.geoprocessing-activity",
-  "generated": "2026-10-01T07:52:41.679237+00:00",
+  "title": "Validation report for ogc.model.registered-item.register-item-classes.geoprocessing - Geoprocessing Item Class Profile",
+  "bblockName": "Geoprocessing Item Class Profile",
+  "bblockId": "ogc.model.registered-item.register-item-classes.geoprocessing",
+  "generated": "2026-10-01T07:52:43.686781+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/model/registered-item/geoprocessing-activity/example_1_1.ttl",
-        "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/geoprocessing-activity/example_1_1.ttl",
+        "filename": "build/tests/model/registered-item/register-item-classes/geoprocessing/example_1_1.ttl",
+        "url": "https://nielshoffmann.github.io/registered-item-model/build/tests/model/registered-item/register-item-classes/geoprocessing/example_1_1.ttl",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "text/turtle"
@@ -51,123 +51,50 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - /github/workspace/_sources/geoprocessing-activity/ontology.ttl\n - /github/workspace/_sources/activity-type/ontology.ttl\n - /github/workspace/_sources/core-ontology/ontology.ttl\n - https://www.w3.org/ns/prov-o"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - /github/workspace/_sources/rim/register/ontology.ttl\n - /github/workspace/_sources/rim/register-item-class/ontology.ttl\n - /github/workspace/_sources/rim/concept-version/ontology.ttl\n - https://www.w3.org/ns/prov-o"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/geoprocessing-activity/shapes.shacl",
+              "shaclFile": "_sources/register-item-classes/geoprocessing/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/geoprocessing-activity/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/register-item-classes/geoprocessing/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/geoprocessing-activity/shapes.shacl",
+              "shaclFile": "_sources/register-item-classes/geoprocessing/shapes.shacl",
               "focusNodes": {
                 "geoproc:GeoprocessingActivityTypeShape": {
-                  "nodes": []
-                },
-                "_:ne605cb923157415b9f01b4c555ea25efb20": {
-                  "nodes": []
-                },
-                "geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node": {
-                  "nodes": []
-                },
-                "_:ne605cb923157415b9f01b4c555ea25efb21": {
-                  "nodes": []
-                },
-                "geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape": {
-                  "nodes": []
-                },
-                "geoproc:SpatialDataTypeShape": {
                   "nodes": []
                 },
                 "geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first": {
+                "geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node": {
+                  "nodes": []
+                },
+                "_:nbb474a8ef52d407bb26d09348895ff58b21": {
+                  "nodes": []
+                },
+                "geoproc:SpatialDataTypeShape": {
+                  "nodes": []
+                },
+                "geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape": {
                   "nodes": []
                 },
                 "geoproc:GeoprocessingActivityTypesShape": {
                   "nodes": [
                     "geoproc:GeoprocessingActivity"
                   ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/geoprocessing-activity/shapes.shacl:\n - Shape geoproc:GeoprocessingActivityTypeShape: *none*\n - Shape _:ne605cb923157415b9f01b4c555ea25efb20: *none*\n - Shape geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node: *none*\n - Shape _:ne605cb923157415b9f01b4c555ea25efb21: *none*\n - Shape geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape geoproc:SpatialDataTypeShape: *none*\n - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first: *none*\n - Shape geoproc:GeoprocessingActivityTypesShape: geoproc:GeoprocessingActivity\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/activity-type/shapes.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/activity-type/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/activity-type/shapes.shacl",
-              "focusNodes": {
-                "acttype:ActivityTypeShape": {
-                  "nodes": [
-                    "ex:NdviComputation"
-                  ]
                 },
-                "acttype:ActivityTypeItemClassShape": {
-                  "nodes": [
-                    "acttype:activityTypeItemClass"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/activity-type/shapes.shacl:\n - Shape acttype:ActivityTypeShape: ex:NdviComputation\n - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/core-ontology/shapes.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/core-ontology/shapes.shacl",
-              "focusNodes": {
-                "rim:RegisterShape": {
-                  "nodes": [
-                    "ex:eoProcessingRegister"
-                  ]
-                },
-                "rim:RegisterItemShape": {
+                "geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:ConceptShape": {
-                  "nodes": []
-                },
-                "rim:ConceptVersionShape": {
-                  "nodes": []
-                },
-                "rim:RegisterSpecificationShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "rim:RegisterActionShape": {
-                  "nodes": []
-                },
-                "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                "_:nbb474a8ef52d407bb26d09348895ff58b20": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterShape: ex:eoProcessingRegister\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for _sources/register-item-classes/geoprocessing/shapes.shacl:\n - Shape geoproc:GeoprocessingActivityTypeShape: *none*\n - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node: *none*\n - Shape _:nbb474a8ef52d407bb26d09348895ff58b21: *none*\n - Shape geoproc:SpatialDataTypeShape: *none*\n - Shape geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape geoproc:GeoprocessingActivityTypesShape: geoproc:GeoprocessingActivity\n - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first: *none*\n - Shape _:nbb474a8ef52d407bb26d09348895ff58b20: *none*\n"
             },
             {
               "op": "shacl-report",

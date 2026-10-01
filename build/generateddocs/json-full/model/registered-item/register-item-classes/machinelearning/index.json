@@ -1,0 +1,61 @@
+
+
+{
+  "itemIdentifier": "ogc.model.registered-item.register-item-classes.machinelearning",
+  "name": "ML Item Class Profile",
+  "title": "Machine learning training/inference activities, profiled from the Registered Item Model",
+  "abstract": "A profile of the Geoprocessing Activity Profile describing machine learning training and inference runs, and registrable ML activity types, using the STAC MLM extension's task, framework/accelerator and input/output vocabulary.",
+  "description": "# ML Activity Profile\n\nA profile of the register-item-class for registers of\n**machine learning activity types**: kinds of `prov:Activity` that use machine learning.\n\n---\n\nThe reason to declare this as an activity profile is that meachine learning activities need to be documented with respect to risk and the assumptions under which the ML model is deployed",
+  "status": "under-development",
+  "version": "0.2",
+  "itemClass": "model",
+  "isProfileOf": [
+    "ogc.model.registered-item.rim.register-item-class"
+  ],
+  "dependsOn": [
+    "ogc.model.cross-domain.prov",
+    "ogc.contrib.stac.extensions.mlm-ontology"
+  ],
+  "concept": [
+    "https://w3id.org/ogc/rim/ml-activity/MLActivity"
+  ],
+  "shaclShapes": {
+    "ogc.model.registered-item.register-item-classes.machinelearning": [
+      "https://nielshoffmann.github.io/registered-item-model/_sources/register-item-classes/machinelearning/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.contrib.stac.extensions.mlm-ontology": [
+      "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
+    ]
+  },
+  "sources": [
+    {
+      "title": "STAC Machine Learning Model (MLM) Extension Ontology building block",
+      "link": "https://github.com/ogcincubator/bblocks-stac/tree/master/_sources/extensions/mlm-ontology"
+    },
+    {
+      "title": "STAC MLM extension README (field descriptions and example)",
+      "link": "https://github.com/stac-extensions/mlm/blob/main/README.md"
+    },
+    {
+      "title": "W3C PROV-O",
+      "link": "https://www.w3.org/TR/prov-o/"
+    }
+  ],
+  "tags": [
+    "machine learning",
+    "provenance",
+    "MLM",
+    "register",
+    "activity type"
+  ],
+  "dateTimeAddition": "2026-09-17T00:00:00Z",
+  "dateOfLastChange": "2026-10-01",
+  "sourceFiles": "https://nielshoffmann.github.io/registered-item-model/_sources/register-item-classes/machinelearning/",
+  "validationPassed": true,
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/NielsHoffmann/registered-item-model",
+  "gitPath": "_sources/register-item-classes/machinelearning"
+}

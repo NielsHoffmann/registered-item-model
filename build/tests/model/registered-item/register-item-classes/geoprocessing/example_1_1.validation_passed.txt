@@ -1,5 +1,5 @@
-Validation report for ogc.model.registered-item.geoprocessing-activity - Geoprocessing Activity Profile
-Generated 2026-10-01T07:52:41.679141+00:00
+Validation report for ogc.model.registered-item.register-item-classes.geoprocessing - Geoprocessing Item Class Profile
+Generated 2026-10-01T07:52:43.686684+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl created
@@ -12,49 +12,24 @@ Prefixes are defined for geoproc, acttype, rim, prov, p-plan, geo, dct, rdfs, ow
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
  - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle
- - /github/workspace/_sources/geoprocessing-activity/ontology.ttl
- - /github/workspace/_sources/activity-type/ontology.ttl
- - /github/workspace/_sources/core-ontology/ontology.ttl
+ - /github/workspace/_sources/rim/register/ontology.ttl
+ - /github/workspace/_sources/rim/register-item-class/ontology.ttl
+ - /github/workspace/_sources/rim/concept-version/ontology.ttl
  - https://www.w3.org/ns/prov-o
-Validation result for _sources/geoprocessing-activity/shapes.shacl:
+Validation result for _sources/register-item-classes/geoprocessing/shapes.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for _sources/geoprocessing-activity/shapes.shacl:
+Focus nodes for _sources/register-item-classes/geoprocessing/shapes.shacl:
  - Shape geoproc:GeoprocessingActivityTypeShape: *none*
- - Shape _:ne605cb923157415b9f01b4c555ea25efb20: *none*
- - Shape geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node: *none*
- - Shape _:ne605cb923157415b9f01b4c555ea25efb21: *none*
- - Shape geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape: *none*
- - Shape geoproc:SpatialDataTypeShape: *none*
  - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first: *none*
+ - Shape geoproc:GeoprocessingActivityTypesShape/sh:property/sh:node: *none*
+ - Shape _:nbb474a8ef52d407bb26d09348895ff58b21: *none*
+ - Shape geoproc:SpatialDataTypeShape: *none*
+ - Shape geoproc:SpatialDataTypeShape/sh:property/sh:qualifiedValueShape: *none*
  - Shape geoproc:GeoprocessingActivityTypesShape: geoproc:GeoprocessingActivity
-
-Validation result for _sources/activity-type/shapes.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/activity-type/shapes.shacl:
- - Shape acttype:ActivityTypeShape: ex:NdviComputation
- - Shape acttype:ActivityTypeItemClassShape: acttype:activityTypeItemClass
-
-Validation result for _sources/core-ontology/shapes.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterShape: ex:eoProcessingRegister
- - Shape rim:RegisterItemShape: *none*
- - Shape rim:CommitmentShape: *none*
- - Shape rim:ConceptShape: *none*
- - Shape rim:ConceptVersionShape: *none*
- - Shape rim:RegisterSpecificationShape: *none*
- - Shape rim:TextShape/sh:or/rdf:first: *none*
- - Shape rim:RegisterActionShape: *none*
- - Shape rim:TextShape: *none*
- - Shape rim:RegisterItemClassShape: *none*
- - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geoproc:GeoprocessingActivityTypeShape/sh:or/rdf:first: *none*
+ - Shape _:nbb474a8ef52d407bb26d09348895ff58b20: *none*
 
 Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
   Validation Report

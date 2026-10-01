@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.model.registered-item.register-item-classes.machinelearning - ML Item Class Profile",
+  "bblockName": "ML Item Class Profile",
+  "bblockId": "ogc.model.registered-item.register-item-classes.machinelearning",
+  "generated": "2026-10-01T07:52:46.995703+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}
